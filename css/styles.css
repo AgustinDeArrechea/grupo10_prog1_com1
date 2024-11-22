@@ -1,6 +1,7 @@
 footer {
     background-color: lightblue;
     display: flex;
+    
 *{box-sizing: border-box;}
 body{
    margin: 0;
