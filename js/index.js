@@ -1,6 +1,3 @@
-
-
-// Función para cargar recetas desde la API
 function cargarRecetas() {
     fetch(`https://dummyjson.com/recipes?limit=10&skip=10`)
         .then(function(respuesta) {
@@ -31,7 +28,7 @@ function cargarRecetas() {
 
 cargarRecetas();
 
-let cargarMasBtn = document.getElementById('cargar-mas');
+let cargarMasBtn = document.querySelector('#cargar-mas');
 
 cargarMasBtn.addEventListener('click', function() {
     cargarRecetas();
