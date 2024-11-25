@@ -4,6 +4,18 @@ body{
    padding: 0;
    background-color: lightblue;
 }
+a{
+    text-decoration: none;
+    color: black;
+}
+ul{
+    list-style-type: none;
+}
+img{
+    display: flex;
+    align-self: center;
+    justify-self: center;
+}
 header{
     display: flex;
     align-items: center;
@@ -12,14 +24,26 @@ header{
     padding: 10px 20px;
 }
 
+article{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.seccion-footer{
+    margin: 50px 0;
+    display: flex;
+    justify-content: space-around;
+    justify-self: center;
+    width: 90vw;
+}
+
 .logoimg{
     width: 100px;
     height: auto;
 }
-footer {
-    background-color: lightblue;
-    display: flex;
-}
+
 .campo-recetas{
     display: flex;
     flex-wrap: wrap;
