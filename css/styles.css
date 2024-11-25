@@ -20,6 +20,14 @@ footer {
     background-color: lightblue;
     display: flex;
 }
+.campo-recetas{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.receta{
+    width: 22vw;
+}
 .receta img{
     width: 40px;
     height: 40px;
