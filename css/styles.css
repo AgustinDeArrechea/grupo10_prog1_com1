@@ -1,6 +1,4 @@
-footer {
-    background-color: lightblue;
-    display: flex;
+
 *{box-sizing: border-box;}
 body{
    margin: 0;
@@ -19,3 +17,7 @@ header{
     width: 100px;
     height: auto;
 }
+
+footer {
+    background-color: lightblue;
+    display: flex;}
