@@ -1,31 +1,27 @@
 let queryString = location.search;
 let queryStringObj = new URLSearchParams(queryString);
-let cat = queryStringObj.get("search");
-console.log(cat)
+let rec = queryStringObj.get("search");
 function cargarCategorias(){
-    fetch(`https://dummyjson.com/recipes/tag/${cat}`)
+    fetch(`https://dummyjson.com/recipes/search?q=${rec}`)
         .then(function(respuesta) {
             return respuesta.json();
         })
-        .then(function(categorias) {
-            console.log(categorias) 
-            console.log(categorias.recipes[0].name) 
-            console.log(cat)
-            let lista = document.querySelector("#categoria-div");
-            for (let i = 0; i < categorias.recipes.length; i++) {
-                let categ = `
+        .then(function(recetas) {
+            
+            let lista = document.querySelector("#resultados");
+            for (let i = 0; i < recetas.recipes.length; i++) {
+                let rece = `
                     <div class="receta">
-                        <a href="receta.html?id=${categorias.recipes[i].id}">
-                            <img src="${categorias.recipes[i].image}"">
-                            <h3>${categorias.recipes[i].name}</h3>
-                            <p>Categorías: ${categorias.recipes[i].tags}</p>
-                            <p>Dificultad: ${categorias.recipes[i].difficulty}</p> 
+                        <a href="receta.html?id=${recetas.recipes[i].id}">
+                            <img src="${recetas.recipes[i].image}" alt="${recetas.recipes[i].name}">
+                            <h3>${recetas.recipes[i].name}</h3>
+                            <p>Categorías: ${recetas.recipes[i].tags}</p>
+                            <p>Dificultad: ${recetas.recipes[i].difficulty}</p> 
                         </a>
                     </div>
                 `;
-                lista.innerHTML += categ;
+                lista.innerHTML += rece;
             }
-            console.log(lista)
         })
         .catch(function(error){
             console.log("El error es: " + error);
@@ -39,21 +35,21 @@ function cargarCategorias(){
 cargarCategorias();
 
 
-let buscar = document.querySelector('#search');
-let errorForm = document.querySelector('.error-form');
-let form = document.querySelector('#search-form');
+let buscarr = document.querySelector('#search');
+let errorFormm = document.querySelector('.error-form');
+let formm = document.querySelector('#search-form');
 
 form.addEventListener('submit', function(event) {
     event.preventDefault(); 
     let valida = true;
 
-    if (buscar.value== "") {
+    if (buscarr.value== "") {
         valida = false;
-        errorForm.innerHTML = '<p class="error-buscador">Por favor, complete el campo.</p>';
+        errorFormm.innerHTML = '<p class="error-buscador">Por favor, complete el campo.</p>';
     }
-    if ((buscar.value.length < 3) && (buscar.value.length != 0)){
+    if ((buscarr.value.length < 3) && (buscarr.value.length != 0)){
         valida = false;
-        errorForm.innerHTML = '<p class="error-buscador">Ingrese minimo 3 casracteres</p>';
+        errorFormm.innerHTML = '<p class="error-buscador">Ingrese minimo 3 casracteres</p>';
     }
     if (valida) {
         this.submit();
