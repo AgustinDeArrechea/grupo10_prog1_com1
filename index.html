@@ -6,26 +6,41 @@
     <link rel="stylesheet" href="./css/styles.css">
     <title>Recetas-Home</title>
     <link rel="stylesheet" href="./css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bad+Script&family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&family=Doto:wght@100..900&family=Shadows+Into+Light&family=Special+Elite&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto&display=swap" rel="stylesheet">   
 </head>
 
 <body>
     <header>
-        <div class="logo">
-            <img class="logoimg" src="./img/image.png" alt="">
+        <div class="navegacion">
+            <div class="logo">
+                <img class="logoimg" src="./img/image.png" alt="">
+            </div>
+            <nav class="nav-header">
+                <ul class="ul-header">
+                    <li><a class="barra-nav" href="./index.html">Home</a> </li>
+                    <li><a class="barra-nav" href="./categories.html">Categorias</a></li>
+                    <li><a class="barra-nav" href="./login.html">Login</a></li>
+                    <li><a class="barra-nav" href="./register.html">Registro</a></li>
+                </ul>
+            </nav>
+    
         </div>
-        <nav>
-            <ul>
-                <li><a href="./index.html">Home</a> </li>
-                <li><a href="./categories.html">Categorias</a></li>
-                <li><a href="./login.html">Login</a></li>
-                <li><a href="./register.html">Registro</a></li>
-            </ul>
-        </nav>
-        <form action="./search-results.html" method="get" id="search-form">
-            <input type="search" name="search" id="search" value="" placeholder="Buscar Recetas">
-            <button type="submit">Buscar</button>
-            <div class="error-form"></div>
-        </form>
+        
+        <div class="banner">
+            <h1>The Cooks</h1>
+            <p>Search for your favorite recipes</p>
+            <div >
+                <form action="./search-results.html" method="get" id="search-form">
+                    <input type="search" name="search" id="search" value="" placeholder="Buscar Recetas">
+                    <button class="but-buscar" type="submit">Buscar</button>
+                    <div class="error-form"></div>
+                </form>
+            </div>
+        </div>
     </header>
     <main>
         <h1>Recetas destacadas</h1>
