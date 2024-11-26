@@ -40,3 +40,22 @@ function cargarCategorias(){
 
 }
 cargarCategorias();
+
+
+let buscar = document.querySelector('#search');
+let errorForm = document.querySelector('.error-form');
+let form = document.querySelector('#search-form');
+
+form.addEventListener('submit', function(event) {
+    event.preventDefault(); 
+    let valida = true;
+
+    if (buscar.value.trim() === "") {
+        valida = false;
+        errorForm.innerHTML = '<p>Por favor, complete el campo.</p>';
+    }
+
+    if (valida) {
+        form.submit();
+    }
+});

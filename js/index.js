@@ -33,3 +33,30 @@ let cargarMasBtn = document.querySelector('#cargar-mas');
 cargarMasBtn.addEventListener('click', function() {
     cargarRecetas();
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+    const form = document.querySelector('#search-form');
+
+    // Verifica que el formulario exista en la página
+    if (form) {
+        const buscar = form.querySelector('#search');
+        const errorForm = form.querySelector('.error-form');
+
+        form.addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevenir el envío por defecto
+            let valida = true;
+            errorForm.innerHTML = ''; // Limpiar mensajes de error previos
+
+            // Validar el campo de búsqueda
+            if (buscar.value.trim() === "") {
+                valida = false;
+                errorForm.innerHTML = '<p>Por favor, complete el campo.</p>';
+            }
+
+            // Si la validación pasa, enviar el formulario
+            if (valida) {
+                form.submit(); // Enviar el formulario
+            }
+        });
+    }
+});
