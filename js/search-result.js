@@ -1,3 +1,29 @@
+
+
+function validarForm(){
+    let buscar = document.querySelector('#search');
+    let errorForm = document.querySelector('.error-form');
+    let form = document.querySelector('#search-form');
+
+    form.addEventListener('submit', function(event) {
+        event.preventDefault(); 
+        let valida = true;
+
+        if (buscar.value== "") {
+            valida = false;
+            errorForm.innerHTML = '<p class="error-buscador">Por favor, complete el campo.</p>';
+        }
+        if ((buscar.value.length < 3) && (buscar.value.length != 0)){
+            valida = false;
+            errorForm.innerHTML = '<p class="error-buscador">Ingrese minimo 3 casracteres</p>';
+        }
+        if (valida) {
+            this.submit();
+        }
+    });
+}
+
+
 let queryString = location.search;
 let queryStringObj = new URLSearchParams(queryString);
 let rec = queryStringObj.get("search");
@@ -33,25 +59,4 @@ function cargarCategorias(){
 
 }
 cargarCategorias();
-
-
-let buscarr = document.querySelector('#search');
-let errorFormm = document.querySelector('.error-form');
-let formm = document.querySelector('#search-form');
-
-form.addEventListener('submit', function(event) {
-    event.preventDefault(); 
-    let valida = true;
-
-    if (buscarr.value== "") {
-        valida = false;
-        errorFormm.innerHTML = '<p class="error-buscador">Por favor, complete el campo.</p>';
-    }
-    if ((buscarr.value.length < 3) && (buscarr.value.length != 0)){
-        valida = false;
-        errorFormm.innerHTML = '<p class="error-buscador">Ingrese minimo 3 casracteres</p>';
-    }
-    if (valida) {
-        this.submit();
-    }
-});
+validarForm();
