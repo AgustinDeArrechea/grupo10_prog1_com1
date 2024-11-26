@@ -34,29 +34,23 @@ cargarMasBtn.addEventListener('click', function() {
     cargarRecetas();
 });
 
-document.addEventListener('DOMContentLoaded', function() {
-    const form = document.querySelector('#search-form');
+let buscar = document.querySelector('#search');
+let errorForm = document.querySelector('.error-form');
+let form = document.querySelector('#search-form');
 
-    // Verifica que el formulario exista en la página
-    if (form) {
-        const buscar = form.querySelector('#search');
-        const errorForm = form.querySelector('.error-form');
+form.addEventListener('submit', function(event) {
+    event.preventDefault(); 
+    let valida = true;
 
-        form.addEventListener('submit', function(event) {
-            event.preventDefault(); // Prevenir el envío por defecto
-            let valida = true;
-            errorForm.innerHTML = ''; // Limpiar mensajes de error previos
-
-            // Validar el campo de búsqueda
-            if (buscar.value.trim() === "") {
-                valida = false;
-                errorForm.innerHTML = '<p>Por favor, complete el campo.</p>';
-            }
-
-            // Si la validación pasa, enviar el formulario
-            if (valida) {
-                form.submit(); // Enviar el formulario
-            }
-        });
+    if (buscar.value== "") {
+        valida = false;
+        errorForm.innerHTML = '<p class="error-buscador">Por favor, complete el campo.</p>';
+    }
+    if ((buscar.value.length < 3) && (buscar.value.length != 0)){
+        valida = false;
+        errorForm.innerHTML = '<p class="error-buscador">Ingrese minimo 3 casracteres</p>';
+    }
+    if (valida) {
+        this.submit();
     }
 });
