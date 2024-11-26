@@ -47,3 +47,11 @@ article{
     width: 100px;
     height: auto;
 }
+
+.feedback-error {
+    display: none;
+}
+
+.error {
+    color: red;
+}

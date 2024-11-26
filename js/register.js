@@ -19,4 +19,9 @@ formulario.addEventListener('submit', function(event) {
         valida = false;
     }
 
+    if (valida==true) {
+        this.submit();  //Si no hay errores entonces enviamos el formulario con el método submit().
+    }
+
+
 });
