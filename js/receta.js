@@ -24,7 +24,16 @@ fetch(`https://dummyjson.com/recipes/${id}`)
         imagenReceta.src = info.image;
         instrReceta.innerText = info.instructions
         tiempoReceta.innerText = `Tiempo de cocción: ${info.cookTimeMinutes} minutos`;
-        catReceta.innerText = info.tags
+        for (let i = 0; i < info.tags.length; i++) {
+        let categ = `
+                    <div class="link-cats">
+                        <a href="category.html?id=${info.tags[i]}">
+                            <p>Categorías: ${info.tags[i]}</p>
+                        </a>
+                    </div>
+                `;
+        catReceta.innerHTML += categ;
+        }
     })
     .catch(function(error) {
         console.log('El error es: ' + error);
