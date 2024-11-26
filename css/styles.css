@@ -1,3 +1,4 @@
+
 *{box-sizing: border-box;}
 body{
    margin: 0;
@@ -47,18 +48,10 @@ article{
     height: auto;
 }
 
-.campo-recetas{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
+.feedback-error {
+    display: none;
 }
-.receta{
-    width: 22vw;
-}
-.receta img{
-    width: 40px;
-    height: 40px;
-}
-.receta-imagen{
-    width: 200px;
+
+.error {
+    color: red;
 }
