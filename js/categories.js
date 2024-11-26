@@ -1,5 +1,4 @@
 
-let campoCategorias = document.querySelector('#Campo-Categorias');
 
 function cargarCategorias(){
     fetch('https://dummyjson.com/recipes/tags')
@@ -8,7 +7,6 @@ function cargarCategorias(){
         })
         .then(function(categorias) {
             console.log(categorias) 
-            let info = categorias
             let lista = document.querySelector("#Campo-Categorias");
             for (let i = 0; i < categorias.length; i++) {
                 let categ = `

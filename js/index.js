@@ -1,5 +1,5 @@
 function cargarRecetas() {
-    fetch(`https://dummyjson.com/recipes?limit=10&skip=10`)
+    fetch(`https://dummyjson.com/recipes?limit=10&skip=0`)
         .then(function(respuesta) {
             return respuesta.json();
         })
