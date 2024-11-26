@@ -1,12 +1,7 @@
 let formulario = document.querySelector(".contact-form");
 let campoEmail = document.querySelector('#email');
-
 let campoPassword = document.querySelector('#password');
-
-
-
 let errorEmail = document.querySelector('.invalid-feedback-email');
-
 let errorPassword = document.querySelector('.invalid-feedback-password');
 
 formulario.addEventListener('submit', function(event){
