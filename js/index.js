@@ -12,8 +12,8 @@ function cargarRecetas() {
             for (let i = 0; i < info.length; i++) {
                 let receta = `
                     <div class="receta">
-                        <a href="receta.html?id=${info[i].id}">
-                            <img src="${info[i].image}"">
+                        <a href="receta.html?id=${info[i].id}" class="aReceta">
+                            <img class="imgReceta" src="${info[i].image}"">
                             <h3>${info[i].name}</h3>
                             <p>Categorías: ${info[i].tags}</p>
                             <p>Dificultad: ${info[i].difficulty}</p>
