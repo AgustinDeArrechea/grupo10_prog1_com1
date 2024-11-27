@@ -8,13 +8,13 @@ formulario.addEventListener('submit', function(event) {
     let valida = true
 
     if (email.value == "") {
-        feedback[0].innerHTML = `<p class="error">Por favor complete el campo</p>`;
+        feedback[0].innerHTML = `<p class="error-register">Por favor complete el campo</p>`;
         feedback[0].style.display = 'block';
         valida = false;
     }
 
     if (password.value == "") {
-        feedback[1].innerHTML = `<p class="error">Por favor complete el campo</p>`;
+        feedback[1].innerHTML = `<p class="error-register">Por favor complete el campo</p>`;
         feedback[1].style.display = 'block';
         valida = false;
     }

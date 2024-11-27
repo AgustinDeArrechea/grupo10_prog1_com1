@@ -13,10 +13,13 @@ function cargarRecetas() {
                 let receta = `
                     <div class="receta">
                         <a href="receta.html?id=${info[i].id}">
-                            <img src="${info[i].image}"">
-                            <h3>${info[i].name}</h3>
-                            <p>Categorías: ${info[i].tags}</p>
-                            <p>Dificultad: ${info[i].difficulty}</p>
+                            <img class="img-index" src="${info[i].image}"">
+                            <div class="receta-text">
+                                <h3>${info[i].name}</h3>
+                                <p>Categorías: ${info[i].tags}</p>
+                                <p>Dificultad: ${info[i].difficulty}</p>
+                            </div>
+                            
                         </a>
                     </div>
                 `;
@@ -47,11 +50,11 @@ form.addEventListener('submit', function(event) {
 
     if (buscar.value== "") {
         valida = false;
-        errorForm.innerHTML = '<p class="error-buscador">Por favor, complete el campo.</p>';
+        errorForm.innerHTML = '<p class="error-index">Por favor, complete el campo.</p>';
     }
     if ((buscar.value.length < 3) && (buscar.value.length != 0)){
         valida = false;
-        errorForm.innerHTML = '<p class="error-buscador">Ingrese minimo 3 casracteres</p>';
+        errorForm.innerHTML = '<p class="error-index">Ingrese minimo 3 caracteres</p>';
     }
     if (valida) {
         this.submit();
