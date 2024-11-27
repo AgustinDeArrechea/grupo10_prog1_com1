@@ -1,5 +1,7 @@
+let skip = 0
+
 function cargarRecetas() {
-    fetch(`https://dummyjson.com/recipes?limit=10&skip=0`)
+    fetch(`https://dummyjson.com/recipes?limit=10&skip=${skip}`)
         .then(function(respuesta) {
             return respuesta.json();
         })
@@ -24,6 +26,7 @@ function cargarRecetas() {
         .catch(function(error) {
             console.log('El error es: ' + error);
         });
+    skip += 10
 }
 
 cargarRecetas();
