@@ -19,12 +19,6 @@ function cargarRecetas() {
                                 <p>Categorías: ${info[i].tags}</p>
                                 <p>Dificultad: ${info[i].difficulty}</p>
                             </div>
-                            
-                        <a href="receta.html?id=${info[i].id}" class="aReceta">
-                            <img class="imgReceta" src="${info[i].image}"">
-                            <h3>${info[i].name}</h3>
-                            <p>Categorías: ${info[i].tags}</p>
-                            <p>Dificultad: ${info[i].difficulty}</p>
                         </a>
                     </div>
                 `;
