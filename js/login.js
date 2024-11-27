@@ -19,7 +19,7 @@ formulario.addEventListener('submit', function(event){
 
     if (campoPassword.value == "") {
         valid = false;
-        alert("Por favr complete el campo contraseña")
+        alert("Por favor complete el campo contraseña")
     }  
 
     
