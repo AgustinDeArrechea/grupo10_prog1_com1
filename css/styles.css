@@ -118,7 +118,7 @@ box-shadow: 0 22px 30px rgb(45 41 41 / 76%);
 }
 .receta:hover {
     background: linear-gradient(to right, #c0978b,#e4dfd2 );
-
+    box-shadow: 0 8px 20px rgba(247, 214, 171, 0.986);
 }
 .receta a{
     text-decoration: none;
