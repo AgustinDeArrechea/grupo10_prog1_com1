@@ -43,7 +43,7 @@ form.addEventListener('submit', function(event) {
     }
     if ((buscar.value.length < 3) && (buscar.value.length != 0)){
         valida = false;
-        errorForm.innerHTML = '<p class="error-index">Ingrese minimo 3 caracteres</p>';
+        errorForm.innerHTML = '<p class="error-index">Ingrese minimo 3 caracteres</p>'; 
     }
     if (valida) {
         this.submit();
