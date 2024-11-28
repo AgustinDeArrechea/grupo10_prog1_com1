@@ -30,10 +30,10 @@ header{
     align-items: center;
     flex-direction: column;
     padding: 10px 20px;
-    background-image: url(../img/brooke-lark-08bOYnH_r_E-unsplash.jpg); 
     background-size: cover;
+    background-image: url(../img/brooke-lark-08bOYnH_r_E-unsplash.jpg); 
+
     background-position: center;
-   
     box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.5);
     color: white;
     
@@ -314,24 +314,33 @@ display: flex;
     color: red;
 }
 
+.img-log {
+    width: 300px;
+    height: 300px;
+    background-image: url('../img/brooke-lark-08bOYnH_r_E-unsplash.jpg');
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    margin-right: 10px;
+}
+
 .main-login {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 600px; 
-    background-image: url(../img/pexels-flodahm-541216.jpg); 
     background-size: cover;
     background-position: center;
 }
 
+
+
 .formulario-container {
-    width: 500px; 
     padding: 30px;
     background: rgba(255, 255, 255, 0.9); 
     border-radius: 15px;
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); 
     display: flex;
-    flex-direction: column;
     align-items: center;
     text-align: center;
 }
