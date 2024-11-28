@@ -19,10 +19,12 @@ function cargarCategorias(){
                 let categ = `
                     <div class="receta">
                         <a href="receta.html?id=${categorias.recipes[i].id}" >
-                            <img src="${categorias.recipes[i].image} "class="imgReceta">
+                            <img class="img-index" src="${categorias.recipes[i].image} "class="imgReceta">
+                            <div class="receta-text"> 
                             <h3>${categorias.recipes[i].name}</h3>
                             <p>Categorías: ${categorias.recipes[i].tags}</p>
                             <p>Dificultad: ${categorias.recipes[i].difficulty}</p> 
+                            </div>
                         </a>
                     </div>
                 `;

@@ -99,7 +99,7 @@ p{
     object-fit: cover;
    
 }
-#h1-index {
+.h1-main {
     display: flex;
     justify-content: center;
 }
@@ -199,6 +199,17 @@ display: flex;
     height: auto;
 }
 
+.resultados {  
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.categoria-div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
 .feedback-error {
     display: none;
 }
