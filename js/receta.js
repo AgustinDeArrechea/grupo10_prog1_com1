@@ -26,11 +26,9 @@ fetch(`https://dummyjson.com/recipes/${id}`)
         tiempoReceta.innerText = `Tiempo de cocción: ${info.cookTimeMinutes} minutos`;
         for (let i = 0; i < info.tags.length; i++) {
         let categ = `
-                    <div class="link-cats">
                         <a href="category.html?id=${info.tags[i]}">
-                            <p>Categorías: ${info.tags[i]}</p>
+                            <p>Categorías: ${info.tags[i]} <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#000000"><path d="M216-144q-29.7 0-50.85-21.15Q144-186.3 144-216v-528q0-29.7 21.15-50.85Q186.3-816 216-816h264v72H216v528h528v-264h72v264q0 29.7-21.15 50.85Q773.7-144 744-144H216Zm171-192-51-51 357-357H576v-72h240v240h-72v-117L387-336Z"/></svg></p>
                         </a>
-                    </div>
                 `;
         catReceta.innerHTML += categ;
         }
@@ -50,11 +48,11 @@ form.addEventListener('submit', function(event) {
 
     if (buscar.value== "") {
         valida = false;
-        errorForm.innerHTML = '<p class="error-buscador">Por favor, complete el campo.</p>';
+        errorForm.innerHTML = '<p class="error-index">Por favor, complete el campo.</p>';
     }
     if ((buscar.value.length < 3) && (buscar.value.length != 0)){
         valida = false;
-        errorForm.innerHTML = '<p class="error-buscador">Ingrese minimo 3 casracteres</p>';
+        errorForm.innerHTML = '<p class="error-index">Ingrese minimo 3 caracteres</p>';
     }
     if (valida) {
         this.submit();
