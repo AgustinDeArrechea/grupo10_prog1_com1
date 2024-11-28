@@ -39,11 +39,11 @@ form.addEventListener('submit', function(event) {
 
     if (buscar.value== "") {
         valida = false;
-        errorForm.innerHTML = '<p class="error-buscador">Por favor, complete el campo.</p>';
+        errorForm.innerHTML = '<p class="error-index">Por favor, complete el campo.</p>';
     }
     if ((buscar.value.length < 3) && (buscar.value.length != 0)){
         valida = false;
-        errorForm.innerHTML = '<p class="error-buscador">Ingrese minimo 3 casracteres</p>';
+        errorForm.innerHTML = '<p class="error-index">Ingrese minimo 3 caracteres</p>';
     }
     if (valida) {
         this.submit();
