@@ -26,11 +26,9 @@ fetch(`https://dummyjson.com/recipes/${id}`)
         tiempoReceta.innerText = `Tiempo de cocción: ${info.cookTimeMinutes} minutos`;
         for (let i = 0; i < info.tags.length; i++) {
         let categ = `
-                    <div class="link-cats">
                         <a href="category.html?id=${info.tags[i]}">
                             <p>Categorías: ${info.tags[i]}</p>
                         </a>
-                    </div>
                 `;
         catReceta.innerHTML += categ;
         }

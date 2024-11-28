@@ -27,13 +27,15 @@ function validarForm(){
 let queryString = location.search;
 let queryStringObj = new URLSearchParams(queryString);
 let rec = queryStringObj.get("search");
+let busqueda = document.querySelector('.h1-search');
+
 function cargarCategorias(){
     fetch(`https://dummyjson.com/recipes/search?q=${rec}`)
         .then(function(respuesta) {
             return respuesta.json();
         })
         .then(function(recetas) {
-            
+            busqueda.innerText += `Resultados de busqueda para: "${rec}"`
             let lista = document.querySelector("#resultados");
             for (let i = 0; i < recetas.recipes.length; i++) {
                 let rece = `

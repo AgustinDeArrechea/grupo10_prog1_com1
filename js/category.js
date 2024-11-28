@@ -4,7 +4,7 @@
 let queryString = location.search;
 let queryStringObj = new URLSearchParams(queryString);
 let cat = queryStringObj.get("id");
-
+let titulo = document.querySelector('#categoria-h1')
 function cargarCategorias(){
     fetch(`https://dummyjson.com/recipes/tag/${cat}`)
         .then(function(respuesta) {
@@ -15,6 +15,7 @@ function cargarCategorias(){
             console.log(categorias.recipes[0].name) 
             console.log(cat)
             let lista = document.querySelector("#categoria-div");
+            titulo.innerText += `Categoria: ${cat}`;
             for (let i = 0; i < categorias.recipes.length; i++) {
                 let categ = `
                     <div class="receta">

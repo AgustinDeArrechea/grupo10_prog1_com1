@@ -11,15 +11,14 @@ function cargarRecetas() {
             let lista = document.querySelector("#campo-recetas");
             for (let i = 0; i < info.length; i++) {
                 let receta = `
-                    <div class="receta">
-                        <a href="receta.html?id=${info[i].id}">
-                            <img class="img-index" src="${info[i].image}"">
-                            <div class="receta-text">
-                                <h3>${info[i].name}</h3>
-                                <p>Categorías: ${info[i].tags}</p>
-                                <p>Dificultad: ${info[i].difficulty}</p>
-                            </div>
-                        </a>
+                    <div class="receta">                
+                        <img class="img-index" src="${info[i].image}"">
+                        <div class="receta-text">
+                            <h3>${info[i].name}</h3>
+                            <p>Categorías: ${info[i].tags}</p>
+                            <p>Dificultad: ${info[i].difficulty}</p>
+                            <a href="receta.html?id=${info[i].id}">Ver detalles</a>
+                        </div>
                     </div>
                 `;
                 lista.innerHTML += receta;
