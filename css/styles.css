@@ -62,6 +62,9 @@ ul{
     text-decoration: none;
     color: black;
     margin: 10px;
+    font-family: "Roboto Mono", monospace;
+    font-optical-sizing: auto;
+    font-style: normal;
    
 
 }
@@ -85,6 +88,9 @@ ul{
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
     margin: 0px 0px 12px 0px;
     font-size: 20px;
+    font-family: "Courier Prime", serif;
+    font-weight: 400;
+    font-style: normal;
 }
 
 .banner{
@@ -143,11 +149,10 @@ p{
 .Campo-Categorias{
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-around;
 }
 
-.receta-categories{
-    width: 15px;
-}
+
 
 .receta{
 width: 26%;
@@ -159,6 +164,15 @@ box-shadow: 0 22px 30px rgb(45 41 41 / 76%);
 .receta:hover {
     background: linear-gradient(to right, #c0978b,#e4dfd2 );
     box-shadow: 0 8px 20px rgba(247, 214, 171, 0.986);
+}
+.receta-categories{
+    width: 15vw;
+    border-radius: 15px;
+    box-shadow: 0 8px 10px rgba(0, 0, 0, 0.7);
+    
+}
+.receta-categories p{
+    color: #000000;
 }
 .receta a{
     text-decoration: none;
@@ -411,3 +425,62 @@ input[type="password"] {
 .a-log:hover {
     text-decoration: underline;
 }
+
+
+@media (max-width: 1440px) {
+    
+  }
+  
+@media (max-width: 1024px) {
+    
+  }
+  
+@media (max-width: 768px) {
+    .seccion-footer{
+        flex-wrap: wrap;
+    }
+    .receta{
+        width: 45vw;
+    }
+    .article-footer{
+        width: 55vw;
+    }
+  }
+
+@media (max-width: 425px) {
+    .receta{
+        width: 80vw;
+    }
+    .nav-header{
+        background-color: rgba(255, 255, 255, 0.73);
+        border-radius: 50px;
+    }
+    .navegacion{
+        flex-wrap: wrap;
+        justify-content: center;
+        
+    }
+    #search{
+        width: 250px;
+    }
+    .article-footer{
+        width: 80vw;
+    }
+  }
+
+  @media (max-width: 320px) {
+    .article-footer{
+        width: 97vw;
+    }
+    .redes p{
+        padding: 7px;
+    }
+    .barra-nav{
+        margin: 0 5px;
+    }
+    #search{
+        width: 150px;
+    }
+    
+  }
+  
