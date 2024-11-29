@@ -35,6 +35,13 @@ function cargarCategorias(){
             return respuesta.json();
         })
         .then(function(recetas) {
+            console.log(recetas)
+            if (recetas.recipes == 0){
+                busqueda.innerText += `No se encontraron resultados`
+            }
+            else{
+
+            
             busqueda.innerText += `Resultados de busqueda para: "${rec}"`
             let lista = document.querySelector("#resultados");
             for (let i = 0; i < recetas.recipes.length; i++) {
@@ -53,6 +60,7 @@ function cargarCategorias(){
                     </div>
                 `;
                 lista.innerHTML += rece;
+            }
             }
         })
         .catch(function(error){
