@@ -450,7 +450,9 @@ input[type="password"] {
     text-decoration: underline;
 }
 
-
+.buscador-none {
+    display: none;
+}
 @media (max-width: 1440px) {
     
   }
