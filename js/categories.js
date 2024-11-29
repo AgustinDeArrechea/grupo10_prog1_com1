@@ -10,8 +10,8 @@ function cargarCategorias(){
             let lista = document.querySelector("#Campo-Categorias");
             for (let i = 0; i < categorias.length; i++) {
                 let categ = `
-                    <div class="receta">
-                        <a href="category.html?id=${categorias[i]}">
+                    <div class="receta receta-categories">
+                        <a href="category.html?id=${categorias[i]}" class="a-categories">
                             <p>${categorias[i]}</p>
                         </a>
                     </div>

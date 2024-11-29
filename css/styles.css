@@ -140,6 +140,15 @@ p{
     justify-content: space-evenly;
 }
 
+.Campo-Categorias{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.receta-categories{
+    width: 15px;
+}
+
 .receta{
 width: 26%;
 background: linear-gradient(to right, #e4dfd2, #c0978b);
