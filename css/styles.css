@@ -477,9 +477,13 @@ input[type="password"] {
     .receta-categories{
         width: 29vw;
     }
+    .redes {
+        display: flex;
+        justify-content: center;
+    }
   }
 
-@media (max-width: 425px) {
+@media (max-width: 480px) {
     .receta{
         width: 80vw;
     }
@@ -490,6 +494,7 @@ input[type="password"] {
     .navegacion{
         flex-wrap: wrap;
         justify-content: center;
+        flex-direction: column;
         
     }
     #search{
@@ -506,6 +511,10 @@ input[type="password"] {
     }
     .receta-categories{
         width: 45vw;
+    }
+    .redes {
+        display: flex;
+        justify-content: center;
     }
   }
 
