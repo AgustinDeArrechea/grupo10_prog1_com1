@@ -478,9 +478,13 @@ label {
     .receta-categories{
         width: 29vw;
     }
+    .redes {
+        display: flex;
+        justify-content: center;
+    }
   }
 
-@media (max-width: 425px) {
+@media (max-width: 480px) {
     .receta{
         width: 80vw;
     }
@@ -491,6 +495,7 @@ label {
     .navegacion{
         flex-wrap: wrap;
         justify-content: center;
+        flex-direction: column;
         
     }
     #search{
@@ -507,6 +512,10 @@ label {
     }
     .receta-categories{
         width: 45vw;
+    }
+    .redes {
+        display: flex;
+        justify-content: center;
     }
   }
 
