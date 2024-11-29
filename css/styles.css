@@ -406,8 +406,8 @@ label {
     color: #555;
 }
 
-input[type="email"],
-input[type="password"] {
+.input-email, .input-password
+ {
     width: 100%;
     padding: 10px;
     font-size: 14px;
