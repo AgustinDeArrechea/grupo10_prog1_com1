@@ -242,6 +242,7 @@ box-shadow: 0 22px 30px rgb(45 41 41 / 76%);
 }
 .redes{
 display: flex;
+justify-content: center;
 }
 .footer-bottom {
     background-color: #002244;
