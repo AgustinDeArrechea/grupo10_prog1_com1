@@ -7,24 +7,32 @@ body{
    font-family: 'Playfair Display', serif;
 }
 
-/* .header-categories{
-    background-image: url(../img/pexels-amar-11157601.jpg);
+ .header-categories{
+    background-image: url(../img/pexels-elletakesphotos-1660030.jpg);
 }
 .header-category{
+    background-image: url(../img/pexels-element5-775031.jpg);
 
 }
+
 .header-login{
-
+    background-image: url(../img/pexels-goumbik-616358.jpg);
+    
 }
+
 .header-receta{
-    background-image: url(../img/pexels-amar-11157601.jpg);
+    background-image: url(../img/pexels-sebastian-coman-photography-1598188-3655916.jpg);
 }
+
 .header-register{
+    background-image: url(../img/pexels-goumbik-1410141.jpg);
 
-}
+} 
 .header-seatch-result{
+    background-image: url(../img/pexels-karolina-grabowska-4199098.jpg);
+    background-size: contain;
 
-} */
+} 
 header{
     display: flex;
     align-items: center;
@@ -512,6 +520,8 @@ input[type="password"] {
     #search{
         width: 150px;
     }
-    
+    .banner p {
+        text-align: center;
+    }
   }
   
