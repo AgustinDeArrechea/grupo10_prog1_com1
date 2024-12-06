@@ -1,3 +1,4 @@
+//Cargar Recetas
 let skip = 0
 
 function cargarRecetas() {
@@ -34,13 +35,13 @@ function cargarRecetas() {
 }
 
 cargarRecetas();
-
+// cargar mas boton
 let cargarMasBtn = document.querySelector('#cargar-mas');
 
 cargarMasBtn.addEventListener('click', function() {
     cargarRecetas();
 });
-
+// Seacrh JS 
 let buscar = document.querySelector('#search');
 let errorForm = document.querySelector('.error-form');
 let form = document.querySelector('#search-form');
